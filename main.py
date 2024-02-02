@@ -10,11 +10,7 @@ from publico_rotacao import *
 
 
 ############################## Mensagem e envio pela classe ################################
-msg = """ Boa Dia, Cássio teu gerente de relacionamento do BB falando.
-
-Estava verificando que possui algumas operações de consignado, no BB e fora, e provavelmente com uma taxa mais alta que a que comercializamos hoje, e existe uma chance boa de conseguir um troco na renovação, e ainda baixar a taxa um pouco.
-
-Vamos fazer uma simulação de portabilidade ou de renovação ?
+msg = """ 
 
 
 
