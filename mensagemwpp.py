@@ -31,7 +31,7 @@ class nave:
         contatos_df.reset_index(drop=True, inplace=True)
         enviados = []
         erros = []
-        for i, MCI in enumerate(tqdm(contatos_df['MCI'])):
+        for i, Cod_Cliente in enumerate(tqdm(contatos_df['Cod_Cliente'])):
             try:
                 sleeprange = randint(19,33)
                 pessoa = contatos_df.loc[i, "nome"]
@@ -47,12 +47,12 @@ class nave:
                     EC.visibility_of_element_located((By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p/span'))
                 )
                 mensagem_input.send_keys(Keys.ENTER)
-                enviados.append(MCI) # criando lista de enviados 30/10/2023
+                enviados.append(Cod_cliente) # criando lista de enviados 30/10/2023
                 time.sleep(3)
                 
         
             except Exception as e:
-                erros.append(MCI) # criando lista de erros de envio 30/10/2023
+                erros.append(Cod_cliente) # criando lista de erros de envio 30/10/2023
                 print(f"Erro ao enviar mensagem para {pessoa}: {str(e)}")
                 continue
         return enviados, erros
